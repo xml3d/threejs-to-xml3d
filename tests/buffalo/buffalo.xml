@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml3d xmlns="http://www.xml3d.org/2009/xml3d">
+  <!-- 
+
+ Shaders 
+
+ -->
+  <shader script="urn:xml3d:shader:phong" id="shader_buffalo_mat">
+    <texture name="diffuseTexture">
+      <img src="buffalo.png"/>
+    </texture>
+  </shader>
+  <!-- 
+
+ Mesh Base 
+
+ -->
+  <data id="meshbase" filter="keep(position, texcoord, boneIdx, boneWeight, boneParent, bindTranslation, bindRotation)" src="buffalo.json"/>
+  <!-- 
+
+ Meshes 
+
+ -->
+  <data id="index_buffalo_mat" src="buffalo.json" filter="keep( {index: index_buffalo_mat} )"/>
+  <!-- 
+
+ Animations 
+
+ -->
+  <data id="anim_take_001">
+    <data src="buffalo.json" filter="keep( {translation: take_001_translation, rotation: take_001_rotation } )"/>
+    <float name="maxKey">0.7083333</float>
+  </data>
+</xml3d>

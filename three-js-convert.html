@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Style -->
+  <!-- <link rel="stylesheet" type="text/css" media="all" href="../../style/page.css"/> -->
+  <!-- Scripts -->
+
+  <script type="text/javascript" src="jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="glMatrix.js"></script>
+  <script type="text/javascript" src="three-js-convert.js"></script>
+  <title>XML3D Examples</title>
+  <style type="text/css" >
+    textarea{
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+  <script type="text/javascript" >
+	$(function(){
+		$("textarea").click(function(){
+			this.select();
+		})});
+  </script>
+</head>
+<body>
+  <h2>Three.js JSON Format</h2>
+  <div>
+  <p>Name + Path of external ressources: (example: "data/teapot" creates content for files "data/teapot.xml" and "data/teapot.json")</p>
+  <input type="text" id="filename" name="filename" value="" />
+  <p>three.js JSON format source:</p>
+  <textarea id="input" name="jsonInput" ></textarea>
+  <p>
+  <input type="submit" name="go" value="Convert" onclick="convertDOM()"/>
+  </p>
+  </div>
+  <h3>Output</h3>
+  <div>
+  <p>External Json: <span id="jsonInfo"></span></p>
+  <textarea id="outputJson" name="outputJson" ></textarea>
+  <p>External XML: <span id="xmlInfo"></span></p>
+  <textarea id="outputXml" name="outputXml" ></textarea>
+  <p>Main Document Code Fragment: <span id="docInfo"></span></p>
+  <textarea id="outputXml2" name="outputXml" ></textarea>
+  </div>
+</body>
+</html>

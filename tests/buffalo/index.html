@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <!-- Scripts -->
+  <script type="text/javascript" src="../script/xml3d.js"></script>
+  <script type="text/javascript" src="../script/xml3d-camera.js"></script>
+  <title>XML3D Examples</title>
+  <style>
+	#MyXml3d{
+		border: 1px solid gray;
+	}
+  </style>
+</head>
+<body>
+
+<!-- Scene Graph -->
+<xml3d width="640" height="480" xmlns="http://www.xml3d.org/2009/xml3d"
+		style="border: 1px solid gray" > 
+  <!-- 
+
+ Mesh instantiations 
+
+ -->
+  <group shader="buffalo.xml#shader_buffalo_mat">
+    <mesh type="triangle">
+      <data src="buffalo.xml#meshbase" ></data>
+      <data src="buffalo.xml#index_buffalo_mat" ></data>
+    </mesh>
+  </group>
+  <!-- 
+
+ Animation Base 
+
+ -->
+  <data>
+    <data src="buffalo.xml#meshbase" ></data>
+    <data src="buffalo.xml#anim_take_001" ></data>
+    <float name="key">0.0</float>
+    <float xmlns="http://www.w3.org/1999/xhtml" name="key">0.0</float>
+  </data>
+</xml3d>
+
+</body>
+</html>
