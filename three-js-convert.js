@@ -650,10 +650,12 @@ function parse( json) {
         while ( offset < zLength ) {
 
             var color = {};
-
-            color.r = colors[ offset ++ ];
-            color.g = colors[ offset ++ ];
-            color.b = colors[ offset ++ ];
+            var colorValue = colors[ offset++ ];
+            color.r = (colorValue % 256) / 255;
+            colorValue = Math.floor(colorValue / 256);
+            color.g = (colorValue % 256) / 255;
+            colorValue = Math.floor(colorValue / 256);
+            color.b = (colorValue % 256) / 255;
 
             result.colors.push( color );
         }
