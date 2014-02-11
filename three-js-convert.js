@@ -450,7 +450,7 @@ function createXml(materials, indices, attribs, bindAttribs, animations, filenam
     var base = $(doc.createElement('data'));
     base.attr("id", "meshbase");
 
-    var jsonReference = filename + ".json";
+    var jsonReference =   filename.split('/').pop() + ".json";
 
     var attribNames = [];
     for(var name in attribs){
