@@ -515,7 +515,7 @@ function createXml2(materials, indices, attribs, bindAttribs, animations, filena
         var group = $(doc.createElement('group'));
         group.attr("shader", filename + ".xml#shader_" + matName);
 
-        var mesh = $(doc.createElement('mesh')).attr("type", "triangle");
+        var mesh = $(doc.createElement('mesh')).attr("type", "triangles");
         group.append(mesh);
 
         mesh.append($(doc.createElement('data')).attr("src",  filename + ".xml#meshbase"));
